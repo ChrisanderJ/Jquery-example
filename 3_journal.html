@@ -10,10 +10,39 @@
   <input type="button" value="Post" onclick="post_entry()" />
 
   <script>
-	function post_entry() 
-	{
-		// Your code here
-	}
+	/*function post_entry() {
+    // 1. Get the value from the input field using jQuery
+    var val = $("#textHere").val();
+
+    // 2. Check if the input is not empty
+    if (val !== "") {
+
+        // 3. Append the new entry to the body of the page
+        // This will place your journal entries below the button
+        $("body").append("<p>" + val + "</p><hr>");
+
+        // 4. Clear the text box for the next entry
+        $("#textHere").val("");
+    }
+}*/
+
+  function post_entry() {
+      // 1. Get the value from the input
+      var val = $("#textHere").val();
+
+      if (val !== "") {
+          // 2. Create the entry with an inline style for the line
+          var newEntry = "<div style='border-bottom: 1px solid black; padding: 10px;'>" + val + "</div>";
+          
+          // 3. Add it to the body
+          $("body").append(newEntry);
+
+          // 4. Clear the box
+          $("#textHere").val("");
+      }
+  }
+
+
   </script>
 </body>
 

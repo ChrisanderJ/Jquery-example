@@ -1,22 +1,36 @@
 <html>
 	<head>
+
+		
+	<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+
 	<script>
 		function RPS(x)
 		{
 			switch(x)
 			{
-				case 1: document.getElementById("YourMove").innerHTML = "Your move: Rock"; break;
-				case 2: document.getElementById("YourMove").innerHTML = "Your move: Paper"; break;
-				case 3: document.getElementById("YourMove").innerHTML = "Your move: Scissors"; break;
+				// case 1: document.getElementById("YourMove").innerHTML = "Your move: Rock"; break;
+				case 1: $("#YourMove").html("Your move: Rock"); break;
+ 
+				// case 2: document.getElementById("YourMove").innerHTML = "Your move: Paper"; break;
+				case 2: $("#YourMove").html("Your move: Paper"); break;
+
+				// case 3: document.getElementById("YourMove").innerHTML = "Your move: Scissors"; break;
+				case 3: $("#YourMove").html("Your move: Scissors"); break;
 			}
 
 			var opMove = Math.floor(Math.random()*3) + 1; // select between 1 to 3
 			
 			switch(opMove)
 			{
-				case 1: document.getElementById("OpponentMove").innerHTML = "Opponent's move: Rock"; break;
-				case 2: document.getElementById("OpponentMove").innerHTML = "Opponent's move: Paper"; break;
-				case 3: document.getElementById("OpponentMove").innerHTML = "Opponent's move: Scissors"; break;
+				// case 1: document.getElementById("OpponentMove").innerHTML = "Opponent's move: Rock"; break;
+				case 1: $("#OpponentMove").html("Opponent's move: Rock"); break;	
+				
+				// case 2: document.getElementById("OpponentMove").innerHTML = "Opponent's move: Paper"; break;
+				case 2: $("#OpponentMove").html("Opponent's move: Paper"); break;	
+				
+				//case 3: document.getElementById("OpponentMove").innerHTML = "Opponent's move: Scissors"; break;
+				case 3: $("#OpponentMove").html("Opponent's move: Scissors"); break;	
 			}
 
 			var gameVerdict;
@@ -47,15 +61,19 @@
 			switch (gameVerdict)
 			{
 				case 1:
-					document.getElementById("Verdict").innerHTML = "Verdict = DRAW";
+					// document.getElementById("Verdict").innerHTML = "Verdict = DRAW";
+					$("#Verdict").html("Verdict = DRAW"); 	
 					break;
 
 				case 2:
-					document.getElementById("Verdict").innerHTML = "Verdict = LOST";
+					// document.getElementById("Verdict").innerHTML = "Verdict = LOST";
+					$("#Verdict").html("Verdict = LOST"); 	
 					break;
 
 				case 3:
-					document.getElementById("Verdict").innerHTML = "Verdict = WON";
+					// document.getElementById("Verdict").innerHTML = "Verdict = WON";
+					$("#Verdict").html("Verdict = WON"); 	
+					break;
 			}
 		}
 	</script>

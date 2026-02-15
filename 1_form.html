@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+		<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+
         <script>
 	function checkForm()
 	{
-		var firstName = document.getElementById("firstname").value;
-		var lastName = document.getElementById("lastname").value;
-		var email = document.getElementById("email").value;
-		var password1 = document.getElementById("password1").value;
-		var password2 = document.getElementById("password2").value;		
+		// var firstName = document.getElementById("firstname").value;
+		var firstName = $("#firstname").val();
+
+		//var lastName = document.getElementById("lastname").value;
+		var lastName = $("#lastname").val();
+
+		// var email = document.getElementById("email").value;
+		var email = $("#email").val();
+
+		// var password1 = document.getElementById("password1").value;
+		var password1 = $("#password1").val();
+
+		// var password2 = document.getElementById("password2").value;		
+		var password2 = $("#password2").val();
 
 		var valid = false;		
 		var all_fields = true;
 		if (firstName == "")
 		{
 			all_fields = false;
-			document.getElementById("firstname").style.backgroundColor = "red";
+			// document.getElementById("firstname").style.backgroundColor = "red";
+			$("#firstname").css("background-color", "red");
 		}
 		else
-			document.getElementById("firstname").style.backgroundColor = "white";
+			// document.getElementById("firstname").style.backgroundColor = "white";
+			$("#firstname").css("background-color", "white");
 
 		if (lastName == "")
 		{
 			all_fields = false;
-			document.getElementById("lastname").style.backgroundColor = "red";
+			// document.getElementById("lastname").style.backgroundColor = "red";
+			$("#lastname").css("background-color", "red");
+
 		}
 		else
-			document.getElementById("lastname").style.backgroundColor = "white";
+			// document.getElementById("lastname").style.backgroundColor = "white";
+			$("#lastname").css("background-color", "white");
 
 		if (email == "")
 		{
 			all_fields = false;
-			document.getElementById("email").style.backgroundColor = "red";
+			// document.getElementById("email").style.backgroundColor = "red";
+			$("#email").css("background-color", "red");
 		}
 		else
-			document.getElementById("email").style.backgroundColor = "white";
+			// document.getElementById("email").style.backgroundColor = "white";
+			$("#email").css("background-color", "white");
 
 		if (password1 == "")
 		{
 			all_fields = false;
-			document.getElementById("password1").style.backgroundColor = "red";
+			// document.getElementById("password1").style.backgroundColor = "red";
+			$("#password1").css("background-color", "red");
 		}
 		else
-			document.getElementById("password1").style.backgroundColor = "white";
+			// document.getElementById("password1").style.backgroundColor = "white";
+			$("#password1").css("background-color", "white");
 
 		if (password2 == "")
 		{
 			all_fields = false;
-			document.getElementById("password2").style.backgroundColor = "red";
-		}
+			// document.getElementById("password2").style.backgroundColor = "red";
+			$("#password2").css("background-color", "red");
+		} 
 		else
-			document.getElementById("password2").style.backgroundColor = "white";
+			// document.getElementById("password2").style.backgroundColor = "white";
+			$("#password2").css("background-color", "white");
 
 		if (all_fields == true)
 		{
@@ -61,8 +84,10 @@
 			}
 			else
 			{
-				document.getElementById("password1").style.backgroundColor = "red";
-				document.getElementById("password2").style.backgroundColor = "red";
+				//document.getElementById("password1").style.backgroundColor = "red";
+				$("#password1").css("background-color", "red");
+				// document.getElementById("password2").style.backgroundColor = "red";
+				$("#password2").css("background-color", "red");
 			}
 		}
 		
@@ -77,19 +102,19 @@
         <table border = 1 align = "center">
             <tr>
                 <td>First Name:</td>
-                <td><input type = text id = firstname size = 25</td>
+                <td><input type = text id = firstname size = 25></td>
             </tr>
 	    <tr>
                 <td>Last Name:</td>
-                <td><input type = text id = lastname size = 25</td>
+                <td><input type = text id = lastname size = 25></td>
             </tr>
 	    <tr>
                 <td>E-mail:</td>
-                <td><input type = text id = email size = 25</td>
+                <td><input type = text id = email size = 25></td>
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input type = password id = password1 size = 25</td>
+                <td><input type = password id = password1 size = 25></td>
             </tr>
             <tr>
                 <td>Confirm Password:</td>
